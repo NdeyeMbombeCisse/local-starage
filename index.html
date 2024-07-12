@@ -57,7 +57,7 @@
         .une_idee{
             border: 1px solid black;
             width: 320px;
-            height: 180px;
+            height: 240px;
         margin-top: 130px;
         border-radius: 3px;
         margin-left: 70px;
@@ -78,6 +78,9 @@
 
             
         }
+        .list_idee{
+            display: flex;
+        }
 
         .une_idee button{
             margin-left: 20px;
@@ -91,7 +94,6 @@
 
         .hidden{
             display: none;
-            color: #ce0033;
         }
 
         
@@ -104,12 +106,12 @@
             <div class="section">
                 <div class="mb-3">
                     <label for="libelle">Entrez le libelle de l'idée</label>
-                    <input type="text" name="libelle" id="libelle_input" class="form-control">
+                    <input type="text" name="libelle_input" id="libelle_input" class="form-control">
                     <span id="error"></span>
                 </div>
                 <div class="mb-3">
                     <label for="categorie">Choisissez la catégorie de l'idée</label>
-                    <select name="categorie" id="categorie_input" class="form-control">
+                    <select name="categorie_input" id="categorie_input" class="form-control">
                         <option value="politique">Politique</option>
                         <option value="sport">Sport</option>
                         <option value="sante">Santé</option>
@@ -122,7 +124,7 @@
             <div class="form-section">
                 <div class="mb-3">
                     <label for="description">Entrez la description du libelle</label>
-                    <textarea type="text" name="description" id="desc_input" class="form-control"></textarea>
+                    <textarea type="text" name="desc_input" id="desc_input" class="form-control"></textarea>
                     <span id="error_desc"></span>
                 </div>
             </div>
@@ -138,14 +140,9 @@
     </div>
 
     <div class="list_idee">
-        <div class="une_idee">
-            <h5>libelle:mon idee</h5>
-            <h5>categorie:Politique</h5>
-            <h5>description:description</h5>
-            <button>approuver</button>
-            <button>desapprouver</button>
-            <i class="fa-solid fa-trash" style="color: #cf1732;"></i>
-        </div>
+        <!-- <div class="une_idee" id="une_idee" class="hidden">
+           
+        </div> -->
     </div>
 
     <script src="java.js"></script>
