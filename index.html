@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Ajout d'Idees</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .container img{
+            width: 230px;
+            margin-left: 80px;
+
+        }
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+        /* .hidden {
+            display: none;
+        } */
+        .section {
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        #categorie_input{
+            margin-left: 40px;
+            width: 260px;
+        }
+        #libelle_input{
+            width: 260px;
+
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 200px;
+            font-size: 20px;
+        }
+        form{
+            margin-top: 50px;
+            margin-left: 70px;
+        }
+
+        #submit_btn{
+            background-color: #ce0033;
+        }
+        .une_idee{
+            border: 1px solid black;
+            width: 320px;
+            height: 180px;
+        margin-top: 130px;
+        border-radius: 3px;
+        margin-left: 70px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background-color: #f9f9f9;
+
+        }
+
+        .une_idee h5{
+            margin-top: 20px;
+            margin-left: 20px;
+
+            
+        }
+
+        .une_idee i{
+            margin-left: 20px;
+
+            
+        }
+
+        .une_idee button{
+            margin-left: 20px;
+            border-radius: 3px;
+            background-color: #ce0033;
+            color: white;
+            border: 1px solid blue;
+
+            
+        }
+
+        .hidden{
+            display: none;
+            color: #ce0033;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="text-center" style="color: #ce0033;">Formulaire d'Ajout d'Idees</h1>
+    <div class="container" id="mon_contenu">
+        <form action="" method="post" id="mon_formulaire">
+            <div class="section">
+                <div class="mb-3">
+                    <label for="libelle">Entrez le libelle de l'idée</label>
+                    <input type="text" name="libelle" id="libelle_input" class="form-control">
+                    <span id="error"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="categorie">Choisissez la catégorie de l'idée</label>
+                    <select name="categorie" id="categorie_input" class="form-control">
+                        <option value="politique">Politique</option>
+                        <option value="sport">Sport</option>
+                        <option value="sante">Santé</option>
+                        <option value="education">Éducation</option>
+                    </select>
+                    <span id="error_categorie"></span>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <div class="mb-3">
+                    <label for="description">Entrez la description du libelle</label>
+                    <textarea type="text" name="description" id="desc_input" class="form-control"></textarea>
+                    <span id="error_desc"></span>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary mt-3 " id="submit_btn">Soumettre</button>
+        </form>
+        
+        <img src="image 54.png" alt="">
+
+    </div>
+    <div id="success_message" class="hidden">
+        <p>Formulaire rempli avec succès !</p>
+    </div>
+
+    <div class="list_idee">
+        <div class="une_idee">
+            <h5>libelle:mon idee</h5>
+            <h5>categorie:Politique</h5>
+            <h5>description:description</h5>
+            <button>approuver</button>
+            <button>desapprouver</button>
+            <i class="fa-solid fa-trash" style="color: #cf1732;"></i>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
